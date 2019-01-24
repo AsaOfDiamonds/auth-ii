@@ -75,7 +75,7 @@ server.post('/api/login', (req, res) => {
 				// create the token
         const token = generateToken(user);
         
-				res.status(200).json({ message: `welcome ${user.name}`, token });
+				res.status(200).json({ message: `welcome ${user.username}`, token });
 			} else {
 				res.status(401).json({ message: 'You shall not pass!!' });
 			}
